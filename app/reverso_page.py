@@ -1,5 +1,5 @@
+from appium.webdriver.common.mobileby import MobileBy
 from appium.webdriver.webdriver import WebDriver
-from selenium.webdriver.common.by import By
 
 from app.base_page import BasePage
 
@@ -7,20 +7,20 @@ from app.base_page import BasePage
 class ReversoPage(BasePage):
     def __init__(self, driver: WebDriver):
         super().__init__(driver)
-        self.text_input_locator = (By.XPATH,
+        self.text_input_locator = (MobileBy.XPATH,
                                    "/AXApplication[@AXTitle='Reverso']/AXWindow[@AXTitle='Reverso' and @AXIdentifier='_NS:14' and @AXSubrole='AXStandardWindow']/AXGroup[@AXIdentifier='_NS:38']/AXGroup[0]/AXScrollArea[0]/AXWebArea[0]/AXTextArea[@AXDOMIdentifier='wordInput']")
-        self.search_button_locator = (By.XPATH,
+        self.search_button_locator = (MobileBy.XPATH,
                                       "/AXApplication[@AXTitle='Reverso']/AXWindow[@AXTitle='Reverso' and @AXIdentifier='_NS:14' and @AXSubrole='AXStandardWindow']/AXGroup[@AXIdentifier='_NS:38']/AXGroup[0]/AXScrollArea[0]/AXWebArea[0]/AXButton[4]")
 
-        self.translation_locator = (By.XPATH,
+        self.translation_locator = (MobileBy.XPATH,
                                     "/AXApplication[@AXTitle='Reverso']/AXWindow[@AXTitle='Reverso' and @AXIdentifier='_NS:14' and @AXSubrole='AXStandardWindow']/AXGroup[@AXIdentifier='_NS:38']/AXGroup[0]/AXScrollArea[0]/AXWebArea[0]/AXGroup[7]/AXStaticText"
                                     )
-        self.clear_input_locator = (By.XPATH,
+        self.clear_input_locator = (MobileBy.XPATH,
                                     "/AXApplication[@AXTitle='Reverso']/AXWindow[@AXTitle='Reverso' and @AXIdentifier='_NS:14' and @AXSubrole='AXStandardWindow']/AXGroup[@AXIdentifier='_NS:38']/AXGroup[0]/AXScrollArea[0]/AXWebArea[0]/AXButton[4]")
-        self.recent_searches_locator = (By.XPATH,
+        self.recent_searches_locator = (MobileBy.XPATH,
                                         "/AXApplication[@AXTitle='Reverso']/AXWindow[@AXTitle='Reverso' and @AXIdentifier='_NS:14' and @AXSubrole='AXStandardWindow']/AXGroup[@AXIdentifier='_NS:38']/AXGroup[0]/AXScrollArea[0]/AXWebArea[0]/AXGroup[@AXSubrole='AXContentList']/AXHeading[@AXTitle='RECENT SEARCHES']/AXGroup[0]/AXStaticText[@AXValue='RECENT SEARCHES']"
                                         )
-        self.recent_searches_result_locator = (By.XPATH,
+        self.recent_searches_result_locator = (MobileBy.XPATH,
                                                "/AXApplication[@AXTitle='Reverso']/AXWindow[@AXTitle='Reverso' and @AXIdentifier='_NS:14' and @AXSubrole='AXStandardWindow']/AXGroup[@AXIdentifier='_NS:38']/AXGroup[0]/AXScrollArea[0]/AXWebArea[0]/AXGroup[@AXSubrole='AXContentList']/AXGroup[0]/AXGroup[0]/AXStaticText")
 
     @property

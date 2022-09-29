@@ -1,7 +1,7 @@
 import allure
 
 from app.reverso_page import ReversoPage
-from test_data.test_data import original_word, translation
+from test_data.test_data import original_word, translation, text
 
 
 class TestTranslationPage:
@@ -15,11 +15,12 @@ class TestTranslationPage:
     def test_clear_input(self, driver):
         with allure.step("Enter the text into the text field"):
             app_screen = ReversoPage(driver)
-            app_screen.search_text("text")
+            app_screen.search_text(text)
+            text_input = app_screen.text_input
+            assert text_input.text == text, "Text was not entered"
         with allure.step("Clear the text input field"):
             app_screen.clear_input()
         with allure.step("Check that text input is cleared"):
-            text_input = app_screen.text_input
             assert text_input.text == "", "Text input is not cleared"
 
     def test_recent_searches(self, driver):

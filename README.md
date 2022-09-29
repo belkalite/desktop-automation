@@ -7,10 +7,11 @@ For demo proposals Reverso application is used https://context.reverso.net/
 
 Prerequisites:
 
-1. Python 3.7 or greater is required.
-2. Install and run appium-for-mac:
+1. МacOS over 10.15
+2. Python 3.7 or greater is required.
+3. Install and run appium-for-mac:
 https://github.com/appium/appium-for-mac
-3. Install Reverso application and give permission to open the app downloaded from the Internet:
+4. Install Reverso application and give permission to open the app downloaded from the Internet:
 
 ```brew install --cask reverso```
 
