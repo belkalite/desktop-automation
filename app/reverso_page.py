@@ -38,11 +38,11 @@ class ReversoPage(BasePage):
     def translation_label(self):
         return self._get_visible_element(self.translation_locator)
 
-    def search_text(self, value):
-        self._fill_input(self.text_input_locator, value)
+    def search_text(self, value: str):
+        self.enter_text(value)
         self.click_on_element(self.search_button_locator)
 
-    def enter_text(self, value):
+    def enter_text(self, value: str):
         self._fill_input(self.text_input_locator, value)
 
     def clear_input(self):

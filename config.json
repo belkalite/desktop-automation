@@ -1,0 +1,12 @@
+{
+  "remote_url": "http://localhost:4622/wd/hub",
+  "application_name": "Reverso",
+  "wait_time": 2,
+  "desired_capabilities": {
+    "platformName": "Mac",
+    "deviceName": "mac",
+    "platformVersion": "12.4",
+    "automationName": "mac2",
+    "bundleId": "com.softissimo.ReversoContext.macosapp"
+  }
+}

@@ -18,9 +18,17 @@ Create your virtualenv, activate and install dependencies:
 
 ```pip install -r requirements.txt```
 
-Test run and save Allure report:
+Run tests:
 
-```pytest --alluredir=allure_report --clean-alluredir tests/test_reverso.py```
+```pytest tests```
+
+Run tests and save Allure report:
+
+```pytest --alluredir=allure_report tests```
+
+To clean the results of previous run:
+
+```pytest --alluredir=allure_report --clean-alluredir tests```
 
 Allure report results:
 

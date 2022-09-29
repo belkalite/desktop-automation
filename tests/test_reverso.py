@@ -1,14 +1,11 @@
 import allure
-import pytest
 
 from app.reverso_page import ReversoPage
+from test_data.test_data import original_word, translation
 
 
 class TestTranslationPage:
-    @pytest.mark.parametrize("original_word, translation",
-                             [("sun", "солнышко "),
-                              ("hello", "привет")])
-    def test_translate(self, driver, original_word, translation):
+    def test_translate(self, driver):
         with allure.step("Enter the text into the text field"):
             app_screen = ReversoPage(driver)
             app_screen.search_text(original_word)
@@ -30,4 +27,5 @@ class TestTranslationPage:
             app_screen = ReversoPage(driver)
             app_screen.open_recent_searches()
         with allure.step("Check that last searches results are appeared"):
-            assert app_screen.recent_searches_result_label.text == "hello", "Recent searches results are not appeared"
+            assert app_screen.recent_searches_result_label.text == original_word, \
+                "Recent searches results are not appeared"
